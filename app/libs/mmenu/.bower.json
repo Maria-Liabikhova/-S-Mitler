@@ -1,0 +1,15 @@
+{
+  "name": "mmenu",
+  "homepage": "https://github.com/BeSite/jQuery.mmenu",
+  "version": "8.5.15",
+  "_release": "8.5.15",
+  "_resolution": {
+    "type": "version",
+    "tag": "v8.5.15",
+    "commit": "4a78f5c6c6327594ec8487a4be0e5a9b840f2062"
+  },
+  "_source": "https://github.com/BeSite/jQuery.mmenu.git",
+  "_target": "^8.5.15",
+  "_originalSource": "mmenu",
+  "_direct": true
+}
