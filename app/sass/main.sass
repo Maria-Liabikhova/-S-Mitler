@@ -71,10 +71,10 @@ body
 		white-space: nowrap
 		color: $white
 	.fa-mobile
-		color: $white
-		border: 1px solid red
-		margin-right: 5px
-		font-size: 35px
+		color:  #666
+		margin-right: 10px
+		font-size: 30px
+		margin-top: 3px
 
 section, header
 	position: relative
@@ -96,17 +96,19 @@ section
 	background-color: $accent
 	color: #fff
 
-// .hamburger--emphatic
 .hamburger
-	position: absolute
-	right: 10px
-	.hamburger-inner
-		background-color: $white
-		width: 34px
-		height: 2px
-		&:before, &:after
+	&--emphatic
+		position: absolute
+		right: 10px
+		.hamburger-inner
 			background-color: $white
 			width: 34px
 			height: 2px
+			&:before, &:after
+				background-color: $white
+				width: 34px
+				height: 2px
+// #my-menu
+// 	display: block
 
 @import "media" // Всегда в конце
