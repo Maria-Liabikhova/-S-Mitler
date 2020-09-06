@@ -30,35 +30,34 @@ body
 		font-size: 30px
 		margin-top: 3px
 section, header
-	position: relative
 	background-size: cover
 	background-position: center
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
-.hamburger
-	&--emphatic
-		position: absolute
-		right: 10px
-		.hamburger-inner
-			background-color: $white
-			width: 34px
-			height: 2px
-			&:before, &:after
-				background-color: $white
-				width: 34px
-				height: 2px
+.hamburger--emphatic
+  padding: 0
+  position: absolute
+  right: 10px
+  top: 50px
+  .hamburger-inner
+    background-color: $white
+    width: 34px
+    height: 2px
+    &:before, &:after
+      background-color: $white
+      width: 34px
+      height: 2px
 .header-flex
   display: flex
   height: 100%
-  position: 
+  position: relative
   top: 0
 .flex-center
   margin: auto
 .header-composition
   text-align: center
-  position: relative
   p
     margin-top: 40px
   .button
@@ -75,7 +74,6 @@ section, header
     margin-bottom: -10px
     &:before, &:after
       content: ""
-      position: relative
       height: 1px
       width: 100%
       background-color: $gray
@@ -99,6 +97,33 @@ section, header
       &:last-child
         margin-left: 10px
         margin-right: inherit
-
-
-     
+.header-social
+  position: absolute
+  display: flex
+  right: 0
+  height: 100%
+  border-left: 1px solid rgba($white, .1)
+  top: 0
+  width: 65px
+  nav
+    display: flex
+.soc
+  margin: auto
+  ul, li
+    margin: 0
+    padding: 0
+    list-style: none
+  i
+    color: darken($gray, 20%) 
+    font-size: 17px
+    background-color: rgba($white, .3)
+    height: 38px
+    width: 38px
+    border-radius: 50%
+    text-align: center
+    margin: 9px 0
+    line-height: 38px
+    transition: background-color .25s ease
+    &:hover
+      background-color: rgba($white, .5)
+      position: relative
