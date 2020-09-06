@@ -1,6 +1,7 @@
 @import "fonts"
 @import "libs"
 @import "vars"
+@import "header"
 
 *
 	-webkit-box-sizing: border-box
@@ -38,6 +39,7 @@ html, body
 	height: 100%
 
 body
+	color: $white
 	font-size: 16px
 	min-width: 320px
 	position: relative
@@ -45,70 +47,62 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	opacity: 1
-	&.ishome
-		.site-header
-			min-height: 700px
-			height: 100vh
-			background-color: $dark
-			.top-line
-				padding-top: 40px
-				position: absolute
-				width: 100%
-				z-index: 1
-.logo
-	img
-		width: 125px
-		height: auto
-		margin-left: 45px
-.phone
-	position: absolute
-	right: 85px
-	top: 44px
-	font-size: 22px
-	display: flex
-	font-family: firasanse
-	p
-		white-space: nowrap
-		color: $white
-	.fa-mobile
-		color:  #666
-		margin-right: 10px
-		font-size: 30px
-		margin-top: 3px
-
-section, header
-	position: relative
-	background-size: cover
-	background-position: center
 
 section
 	background-color: $white
-
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
 
 .text-center
 	text-align: center
 
 ::selection
 	background-color: $accent
-	color: #fff
+	color: $white
 
-.hamburger
-	&--emphatic
+.h1, h2, h3, h4, h5, h6 
+	line-height: 1,4
+	text-transform: uppercase
+
+.button
+	display: inline-block
+	border: none
+	color: $accent
+	text-decoration: none
+	background-color: $accent
+	padding: 15px 45px
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 3px
+	border-radius: 2px
+	text-align: center
+	position: relative
+	outline: none 
+	transition: background-color .1s ease
+	cursor: pointer
+	&::after
+		transition: background-color .2s ease
 		position: absolute
-		right: 10px
-		.hamburger-inner
-			background-color: $white
-			width: 34px
-			height: 2px
-			&:before, &:after
-				background-color: $white
-				width: 34px
-				height: 2px
-// #my-menu
-// 	display: block
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken($accent, 50%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: lighten($accent, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($accent, 5%)
+		&::after
+			opacity: .32
+
+
 
 @import "media" // Всегда в конце

@@ -3,13 +3,22 @@ const { logError } = require("gulp-sass");
 $(function() {
 
 	$('#my-menu').mmenu({
-		extensions: [ 'widescreen', 'theme-black', 'effect-menu-slide', 'pagedim-black'],
+		extensions: ['theme-black', 'effect-menu-slide', 'pagedim-black'],
 		navbar: {
 			title: '<img src="img/logo.svg" alt="Салон красоты">'
 		},
 		offCanvas: {
-			position: right
+			position: "right"
 		}
 	});
+
+	let api = menu.API.data('mmenu');
+	// let api = $('my-menu').data('mmenu');
+	api.bind('openPanel:start', function(){
+		$('.hamburger').addClass('is-active');
+	});
+	api.bind('closePanel', function(){
+		$('.hamburger').removeClass('is-active');
+	})
 
 });
