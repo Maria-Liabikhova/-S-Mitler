@@ -1,6 +1,7 @@
 body
   &.ishome
     .site-header
+      position: relative
       min-height: 700px
       height: 100vh
       background-color: $dark
@@ -127,3 +128,28 @@ section, header
     &:hover
       background-color: rgba($white, .5)
       position: relative
+.header-contacts
+  background-color: rgba(black , .3)
+  // height: 55px
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  border-top: 1px solid rgba($white, .15)
+  padding: 10px 0
+  i 
+    color: $gray
+    display: flex
+    p 
+      color: $white
+      padding-left: 10px
+      font-size: 18px
+      margin-bottom: 0
+.header-phone
+  font-family: firasans, sans-serif
+  font-size: 16px !important
+.fa-mobile
+  display: flex
+  justify-content: center
+      
+

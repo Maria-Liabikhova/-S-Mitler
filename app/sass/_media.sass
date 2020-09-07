@@ -4,22 +4,72 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+	.welcome
+		.h1
+			font-size: 60px
+	.header-bottom
+		font-size: 15px !important
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
-
+	.welcome
+		.h1
+			font-size: 50px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+	.welcome
+		.h1
+			font-size: 35px
+		h6 
+			font-size: 12px
+	.header-composition
+		p
+			font-size: 12px 
+	.fa-location-arrow
+		display: flex
+		justify-content: center
+	.phone
+		p
+			font-size: 16px
+	.header-bottom
+		font-size: 14px !important
+	.fa-location-arrow, .fa-mobile
+		justify-content: start
+	.header-composition
+		p
+			font-size: 10px
+		.button
+			padding: 10px 15px
+			font-size: 13px
+			letter-spacing: 1px
+			text-align: center
+			&::after
+				height: 2px
+	.header-bottom
+		font-size: 12px !important
+	
+		
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.welcome
+		.h1 
+			font-size: 28px !important
+			font-weight: 400
+			margin-top: 5px
+		p 
+			span 
+				font-size: 9px !important
+	.phone
+		display: none
+
+	.fa-mobile
+		font-size: 14px !important
+		margin-right: 4px !important
+
 
 
 /* Custom, iPhone Retina */
