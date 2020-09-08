@@ -1,0 +1,14 @@
+.s-services
+  color: black
+  background-color: yellow
+.owl-next
+  i
+    font-size: 30px
+.owl-prev
+  i
+    font-size: 30px
+
+$colors: $blue, $red, $accent
+@for $i from 1 through length($colors)
+  .carousel-services .owl-item:nth-child(#{length($colors)}n+#{$i})
+    background-color: nth($colors, $i)
