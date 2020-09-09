@@ -40,4 +40,12 @@ $(function() {
     }
   });
 
+  function carouselService() {
+    $('.carousel-services-item').each(function() {
+      let ths = $(this),
+        thsh = ths.find('.carousel-services-content').outerHeight();
+        ths.find('.carousel-services-image').css('min-height', thsh);
+    });
+  }carouselService();
+
 });
