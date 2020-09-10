@@ -14,6 +14,7 @@ $colors: $blue, $red, $accent
 
 
 .carousel-services
+  // backface-visibility: inherit  
   background-color: $dark
   &-item
     color: $white
@@ -25,9 +26,54 @@ $colors: $blue, $red, $accent
     &:hover
       .carousel-services-image
         opacity: 1
+  .owl-item
     &:nth-child(2n+2)
-      flex-direction: column-reverse
+      .carousel-services-item
+        flex-direction: column-reverse
+  &-composition
+    padding: 60px 45px 80px 45px
+    text-align: center
+    .carousel-logo
+      text-align: center
+      img
+        width: 100px
+        height: auto
+        display: inline-block
+    h3
+      font-size: 30px
+      line-height: 30px
+      span
+        font-size: 18px
+        font-weight: 400
+    h3, ul, .button-white
+      display: inline-block
+    .button-white
+      background-color: $white
+      color: black
+      font-weight: 400
+    ul 
+      list-style: none
+      strong
+        color: black
+      li
+        padding: 10px
+        &:first-child, &:nth-child(2n)
+          position: relative
+          &:after
+            content: ""
+            position: absolute
+            height: 1px
+            width: calc(100% + 100px)
+            background-color: $gray
+            opacity: 20%
+            bottom: 0
+            transform: translateX(calc(-100% + 50px))
+            
+        
       
+
+        
+
       
   &-image
     background-size: cover
