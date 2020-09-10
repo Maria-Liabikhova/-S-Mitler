@@ -22,7 +22,6 @@ $(function() {
 // 	})
 
   $('.carousel-services').owlCarousel({
-    loop: true,
     nav: true,
     smartSpeed: 700,
     navText: ['<i class="fa fa-angle-double-left"></i>', '<i class="fa fa-angle-double-right"></i>'],
@@ -47,5 +46,16 @@ $(function() {
         ths.find('.carousel-services-image').css('min-height', thsh);
     });
   }carouselService();
+
+
+
+  $('.carousel-services-composition .h3').each(function() {
+    let ths = $(this);
+    ths.html(ths.html().replace(/(\S+)\s*$/, '<span>$1</span>'));
+  });
+
+
+
+
 
 });
