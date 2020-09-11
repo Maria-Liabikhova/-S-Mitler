@@ -21,6 +21,12 @@ $(function() {
 // 		$('.hamburger').removeClass('is-active');
 // 	})
 
+  $('.carousel-services').on('initialized.owl.carousel', function() {
+    setTimeout(function() {
+      carouselService()
+    }, 100);
+  });
+  
   $('.carousel-services').owlCarousel({
     nav: true,
     dots: false,
