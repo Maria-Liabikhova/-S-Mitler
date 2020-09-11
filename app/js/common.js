@@ -62,6 +62,10 @@ $(function() {
     ths.html(ths.html().replace(/(\S+)\s*$/, '<span>$1</span>'));
   });
 
+  $('.section-overley .h2').each(function() {
+    let ths = $(this);
+    ths.html(ths.html().replace(/(\S+)\s*$/, '<span>$1</span>'));
+  });
 
 
 
