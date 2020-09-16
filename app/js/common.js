@@ -67,7 +67,9 @@ $(function() {
     ths.html(ths.html().replace(/(\S+)\s*$/, '<span>$1</span>'));
   });
 
-
+  // $('select').selectize ({
+  //   create: true,
+  // });
 
 
 });

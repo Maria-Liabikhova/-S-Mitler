@@ -46,7 +46,7 @@ gulp.task('js', function() {
 		'app/libs/mmenu/dist/mmenu.js',
 		'app/libs/OwlCarousel/dist/owl.carousel.min.js',
 		'app/libs/fotorama/fotorama.js',
-		'app/libs/selectize.js-master/dist/js/selectize.min.js',
+		'app/libs/selectize.js-master/dist/js/standalone/selectize.min.js',
 		'app/js/common.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
