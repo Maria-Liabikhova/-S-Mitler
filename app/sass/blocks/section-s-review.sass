@@ -3,7 +3,6 @@
   position: absolute
   width: 100%
 .s-review
-  // position: relative
   position: relative
   min-height: 700px
   height: auto
@@ -11,13 +10,12 @@
     font-size: 30px
 .reviews
   text-align: center
-  // position: relative
   &::before, &::after
     content: ",,"
     position: absolute
     font-size: 56px
     font-family: "Times New Roman", serif
-    color: $accent
+    color: #F9C869
     font-weight: bold
     line-height: 0
     display: block
@@ -32,7 +30,6 @@
     width: 100%
     text-align: center
     margin-top: 60px
-    // margin-top: 0
     .owl-dot
       background-color: white
       height: 8px
@@ -43,7 +40,7 @@
       &:last-child
         margin-right: 0
       &.active
-        background-color: $accent
+        background-color: #F9C869
         transform: scale(1.3)
   .review
     margin-top: 20px
@@ -58,7 +55,7 @@
       color: #888
       margin-bottom: 20px
     &-stars
-      color: $accent
+      color: #F9C869
       margin-bottom: 30px
       font-size: 14px
       i

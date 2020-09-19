@@ -73,8 +73,31 @@ $(function() {
     loop: true,
     items: 1,
     smartSpeed: 700,
-    nav: false
+    nav: false,
+    navContainer: false,
 
+  });
+
+  $('.partners').owlCarousel({
+    loop: true,
+    smartSpeed: 700,
+    nav: true,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+
+      },
+      992: {
+        items: 3
+      },
+      1200: {
+        items: 4
+      }
+    },
   });
 
 
