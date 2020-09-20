@@ -31,4 +31,53 @@ p
           transition: all .5s ease 
           &:hover
             color: $white
+.footer
+  &-menu
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+      li.active
+        a
+          color: $accent 
+          &::before
+              color: $accent
+      li 
+        margin-bottom: 8px
+        &:last-child
+          margin-bottom: 0
+        a
+          color: $lightest-grey
+          text-decoration: underline
+          position: relative
+          padding-left: 20px
+          transition: all .25s ease
+          &:before
+            content: "\f219"
+            font-family: fontawesome
+            position: absolute
+            font-size: 12px
+            color: $white
+            left: 0
+            bottom: -3px
+          &:hover, &:focus
+            color: $accent
+            transition: all .25s ease
+            &::before
+              color: $accent
+  &-address
+    color: $white
+    font-size: 14px
+    margin-bottom: 10px
+    font-family: $default-font
+    i 
+      margin-right: 5px
+      color: $grey 
+    &--tel
+      margin-top: 30px
+      font-size: 26px
+      font-family: $firasans
+      font-weight: normal
+       
+          
 // main-footer END
