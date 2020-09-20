@@ -4,7 +4,7 @@
   background-size: contain
   background-repeat: no-repeat
   background-color: $white
-  background-position: 10% //???вроде, тоже плохо здесь проценты, да?
+  background-position: 10% 
   &:before
     content: ""
     position: absolute
@@ -31,7 +31,7 @@
         opacity: .5
         filter: blur(10px)
   .callback
-    padding: 25% 0     //   :(
+    padding: 25% 0
     position: relative
     p 
       margin-top: 0
@@ -57,14 +57,34 @@
       display: inline-block
       width: 100%
       margin-top: 15px
+      &:hover, &:active, &:focus
+        border-bottom: 4px  solid rgba($dark, .2)
+        border-left: 4px  solid rgba($dark, .2)
+        padding-bottom: 6px
+        padding-left: 17px
       &::-webkit-input-placeholder
         color: $white
         opacity: 1
+        &:hover
+          border-bottom: 4px  solid rgba($dark, .2)
+          border-left: 4px  solid rgba($dark, .2)
+          padding-bottom: 6px
+          padding-left: 17px
       &::-moz-placeholder
         color: $white
         opacity: 1
+        &:hover
+          border-bottom: 4px  solid rgba($dark, .2)
+          border-left: 4px  solid rgba($dark, .2)
+          padding-bottom: 6px
+          padding-left: 17px
       &::-ms-input-placeholder
         color: $white
+        &:hover
+          border-bottom: 4px  solid rgba($dark, .2)
+          border-left: 4px  solid rgba($dark, .2)
+          padding-bottom: 6px
+          padding-left: 17px
       option
         color: $dark
     select
@@ -99,10 +119,4 @@
         top: 13px
       &.dropdown-active::after
         content: '\f106'
-
-        
-
-
-    
-// border: 1px solid red
 // s-call END

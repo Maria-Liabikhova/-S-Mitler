@@ -1,3 +1,4 @@
+// main
 @import "fonts"
 @import "libs"
 @import "vars"
@@ -14,27 +15,21 @@
 		box-sizing: border-box
 
 *::-webkit-input-placeholder
-	color: #666
+	color: $grey
 	opacity: 1 
 
 *:-moz-placeholder
-	color: #666
+	color: $grey
 	opacity: 1
 
 *::-moz-placeholder
-	color: #666
+	color: $grey
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
+	color: $grey
 	opacity: 1
 
-// body input:focus:required:invalid,
-// body textarea:focus:required:invalid
-// 	color: #666
-// body input:required:valid,
-// body textarea:required:valid
-// 	color: #666
 
 html, body
 	height: 100%
@@ -81,7 +76,7 @@ section
 	outline: none 
 	transition: background-color .1s ease
 	cursor: pointer
-	&::after
+	&:after
 		transition: background-color .2s ease
 		position: absolute
 		content: ''
@@ -98,7 +93,7 @@ section
 		color: $white
 	&:hover
 		background-color: lighten($accent, 5%)
-		&::after
+		&:after
 			opacity: .22
 	&:active
 		background-color: darken($accent, 5%)
@@ -106,26 +101,28 @@ section
 			opacity: .32
 	&-white
 		background-color: $white
-		color: black
+		color: $black
 		font-weight: 400
 		&:hover
 			background-color: $white
-			color: black
+			color: $black
 			&::after
 				background-color: $white  
 		&:active, &:focus
-			color: black
+			color: $black
 		&:active,
 			&::after
-				background-color: black
+				background-color: $black
 				opacity: 40%
 
 
 @import "blocks/header"
-@import "blocks/section-s-servises"
+@import "blocks/servises"
 @import "blocks/interior"
 @import "blocks/section-styles"
-@import "blocks/section-s-call"
-@import "blocks/section-s-review"
-@import "blocks/section-s-partners"
+@import "blocks/call"
+@import "blocks/review"
+@import "blocks/partners"
+@import "blocks/footer"
 @import "media" // Всегда в конце
+// main END
