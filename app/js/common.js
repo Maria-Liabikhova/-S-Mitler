@@ -102,18 +102,17 @@ $(function() {
 
 
 
-  	//E-mail Ajax Send
-	$("form.calback").submit(function() { //Change
+  	
+	$("form.callback").submit(function() { 
 		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "mail.php", //Change
+			url: "mail.php", 
 			data: th.serialize()
 		}).done(function() {
 			$(th).find('.success').addClass('active').css('display', 'flex').hide().fadeIn();
 			setTimeout(function() {
         $(th).find('.success').removeClass('active').fadeOut();
-				// Done Functions
 				th.trigger("reset");
 			}, 3000);
 		});

@@ -16,20 +16,25 @@ body
 		width: 125px
 		height: auto
 		margin-left: 45px
-.phone
-	position: absolute
-	right: 85px
-	top: 44px
-	font-size: 22px
-	display: flex
-	font-family: firasanse
-	align-items: center
-  white-space: nowrap
-  color: $white
-	.fa-mobile
-		color: $grey
-		margin-right: 10px
-		font-size: 30px
+.top-line
+  .phone
+    position: absolute
+    right: 85px
+    top: 44px
+    font-size: 20px
+    display: flex
+    .fa-mobile
+      color: $grey
+      margin-right: 10px
+      margin-top: 5px
+      font-size: 23px
+    p
+      font-family: firasanse
+      align-items: center
+      white-space: nowrap
+      color: $white 
+      margin: 0
+      font-size: 22px
 section, header
 	background-size: cover
 	background-position: center
@@ -61,28 +66,40 @@ section, header
   text-align: center
   p
     margin-top: 40px
+    color: $white
+    font-size: 16px
   .button
     margin-top: 25px
 .welcome
-  display: inline-block
-  p
+  p 
+    display: flex
     font-size: 14px
     text-transform: uppercase
-    display: flex
-    align-items: center
     white-space: nowrap
     margin: 0
     margin-bottom: -10px
-    &:before, &:after
-      content: ""
-      height: 1px
-      width: 100%
-      background-color: $grey
+    color: $white
     span
       margin: 0 10px
-      font-size: 10px
+      font-size: 14px
+    &:before, &:after
+      content: ""
+      position: relative
+      height: 1px
+      width: 100%
+      background-color: $white
+      align-self: center
+  h6 
+    font-size: 18px
+    font-weight: normal
+    margin-bottom: 0
+    margin-top: 25px
+    i
+      color: $grey
+      font-size: 12px
+      margin: 0 6px 15px 6px
 .h1
-  font-size: 67px
+  font-size: 69px
   margin: 0
   line-height: 1.6
   border-bottom: 1px solid $white
@@ -129,7 +146,6 @@ section, header
       position: relative
 .header-contacts
   background-color: rgba($black , .3)
-  // height: 55px
   position: absolute
   bottom: 0
   left: 0
