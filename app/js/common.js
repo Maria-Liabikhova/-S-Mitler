@@ -3,28 +3,37 @@
 $(function() {
 
 	$('#my-menu').mmenu({
-		extensions: ['theme-black', 'effect-menu-slide', 'pagedim-black'],
+		extensions: ['theme-black', 'effect-menu-slide', 'pagedim-black', 'position-right', 'position-front'],
 		navbar: {
 			title: '<img src="img/logo.svg" alt="Салон красоты">'
 		},
-		offCanvas: {
-			position: 'right'
-		}
 	});
 
-	let api = $('#my-menu').data('mmenu');
-	api.bind('openPanel:start', function(){
-		$('.hamburger').addClass('is-active');
-	});
-	api.bind('closePanel:before', function(){
-		$('.hamburger').removeClass('is-active');
-	})
-
-
-
-
-
+  let api = $('#my-menu').data('mmenu');
   
+	api.bind('open:finish', function() {
+		$('.hamburger').addClass('is-active');
+    }
+  );
+	api.bind("close:before", function() {
+		$('.hamburger').removeClass('is-active');
+    }
+  );
+  
+  // api.bind('openPanel:start', 
+  //   (panel) => {
+  //     $('.hamburger').addClass('is-active');
+  //   }
+  // );
+  // api.bind('openPanel:finish', 
+  //   (panel) => {
+	// 	$('.hamburger').removeClass('is-active');
+  //  }
+  // );
+  
+
+
+
   $('.carousel-services').on('initialized.owl.carousel', function() {
     setTimeout(function() {
       carouselService()
@@ -105,25 +114,17 @@ $(function() {
   });
 
 
-
-  	
+  
+  
 	$("form.callback").submit(function() { 
 		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", 
-			data: th.serialize()
-		}).done(function() {
-			$(th).find('.success').addClass('active').css('display', 'flex').hide().fadeIn();
-			setTimeout(function() {
-        $(th).find('.success').removeClass('active').fadeOut();
-				th.trigger("reset");
-			}, 3000);
-		});
-		return false;
+    $(th).find('.success').addClass('active').css('display', 'flex').hide().fadeIn();
+    setTimeout(function() {
+      $(th).find('.success').removeClass('active').fadeOut();
+      th.trigger("reset");
+    }, 3000);
+  return false;
   });
-  
-
 
 
 });
