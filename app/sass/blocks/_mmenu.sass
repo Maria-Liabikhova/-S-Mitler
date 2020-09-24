@@ -4,18 +4,49 @@
     height: auto
     position: relative
     border: none
-    &__title img
-      width: 128px
-      height: auto
-      margin: 10px
+    &__title 
+      background-color: $dark
+      img
+        width: 128px
+        height: auto
+        margin: 10px
   &-listitem 
     border: none
+    background-color: $dark
+    font-size: 14px
+    color: &grey
     &:after
       display: none
-li.mm-listitem.mm-listitem_selected 
-  background-color: #000000 //HELP!!!!!
-  color: $accent
+  &-listview
+    padding-left: 50px
+li.mm-listitem.mm-listitem_selected
+  background-color: $dark
+  .mm-listitem__text
+    background-color: $dark
+    color: $accent
+a.mm-listitem__text
+  padding-bottom: 5px
+  &:before
+    content: "\f219"
+    font-family: fontawesome
+    position: absolute
+    font-size: 12px
+    left: -5px
+    color: $white
+    // font-weight: 600
+  &:hover
+    color: $accent
+    transition: all .25s ease
+    &:before
+      color: $accent
+      
+.mm-panel
+  background-color: $dark !important
+
+      
     
+
+
 
 html.mm-opened
   overflow-y: scroll

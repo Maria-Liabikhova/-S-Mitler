@@ -9,36 +9,17 @@ $(function() {
 		},
 	});
 
-  let api = $('#my-menu').data('mmenu');
+
+  // let api = $('#my-menu').data('mmenu');
   
-	api.bind('open:finish', function() {
-		$('.hamburger').addClass('is-active');
-    }
-  );
-	api.bind("close:before", function() {
-		$('.hamburger').removeClass('is-active');
-    }
-  );
-  
-  // api.bind('openPanel:start', 
-  //   (panel) => {
-  //     $('.hamburger').addClass('is-active');
-  //   }
-  // );
-  // api.bind('openPanel:finish', 
-  //   (panel) => {
+	// api.bind('open:start', function() {
+	// 	$('.hamburger').addClass('is-active');
+  //   });
+	// api.bind('close:before', function() {
 	// 	$('.hamburger').removeClass('is-active');
-  //  }
-  // );
-  
+  //   });
 
-
-
-  $('.carousel-services').on('initialized.owl.carousel', function() {
-    setTimeout(function() {
-      carouselService()
-    }, 100);
-  });
+ 
   
   $('.carousel-services').owlCarousel({
     nav: true,
@@ -113,7 +94,13 @@ $(function() {
     },
   });
 
-
+  $(window).scroll(function() {
+    if($(this).scrollTop() > $(this).height()) {
+      $('.top').addClass('active');
+    } else {
+      $('.top').removeClass('active');
+    }
+  });
   
   
 	$("form.callback").submit(function() { 

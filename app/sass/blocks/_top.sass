@@ -1,0 +1,25 @@
+// top
+.top
+  position: fixed
+  z-index: 10
+  bottom: 25px
+  right: -100px
+  background-color: rgba($lightest-grey, .7)
+  color: $overley
+  border-radius: 50%
+  height: 50px
+  width: 50px
+  font-size: 26px
+  text-align: center
+  opacity: .5
+  transition: all .25s ease
+  line-height: 50px
+  cursor: pointer
+  &:hover
+    opacity: .8
+    background-color: $accent
+    transition: all .25s ease
+    color: $white
+  &.active
+    right: 25px
+// top END
